@@ -1135,6 +1135,7 @@ function HeroCarousel({ navigate }) {
   const prev = () => goTo(current - 1);
   const next = useCallback(() => goTo(current + 1), [current, goTo]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     setProgressing(false);
     const t1 = setTimeout(() => setProgressing(true), 50);
